@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Vör account or indexing question
+    url: https://frigga.cloud
+    about: Questions about your Vör organisation, repository syncing or access — not the CLI itself.
