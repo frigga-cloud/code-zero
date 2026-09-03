@@ -2,7 +2,7 @@ blank_issues_enabled: true
 contact_links:
   - name: Access, subscription or a promo code
     url: mailto:hello@frigga.cloud
-    about: Getting CodeZero for your organisation, or an account that cannot sign in.
+    about: Getting CodeZero AI IDE for your organisation, or an account that cannot sign in.
   - name: Repository indexing question
     url: https://frigga.cloud
     about: Questions about your Frigga organisation and which repositories it indexes — not the extension itself.

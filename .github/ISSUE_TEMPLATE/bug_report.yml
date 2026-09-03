@@ -1,5 +1,5 @@
 name: Bug report
-description: Something in CodeZero is not working
+description: Something in CodeZero AI IDE is not working
 labels: [bug]
 body:
   - type: markdown
@@ -11,13 +11,13 @@ body:
   - type: input
     id: build
     attributes:
-      label: CodeZero build
+      label: Build
       description: |
-        The first line of the **code0** channel in the Output panel:
+        The `build:` line from the **code0** channel in the Output panel:
         `Ctrl`/`Cmd`+`Shift`+`P` → *Output*, then pick **code0** from the
-        dropdown. It names the version, the build and the commit — which is
-        what tells us exactly what you are running.
-      placeholder: "CodeZero 1.0.1 (build 12, a1b2c3d)"
+        dropdown. It names the version, the build number and the commit — which
+        is what tells us exactly what you are running.
+      placeholder: "build: 1.0.1+12 (961f5f3)"
     validations:
       required: true
 
@@ -51,6 +51,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Please do not paste tokens.** CodeZero keeps your credentials in VS
+        **Please do not paste tokens.** CodeZero AI IDE keeps your credentials in VS
         Code's secret storage and never prints them — but if something you are
         about to attach contains one, redact it first.
