@@ -1,5 +1,5 @@
 name: Bug report
-description: Something in code0 is not working
+description: Something in CodeZero is not working
 labels: [bug]
 body:
   - type: markdown
@@ -8,21 +8,25 @@ body:
         Thanks for reporting. The three fields below resolve most reports on
         their own — please fill them in even if they seem irrelevant.
 
-  - type: textarea
-    id: status
+  - type: input
+    id: build
     attributes:
-      label: Output of `npx @frigga-cloud/code0 status`
-      description: Paste it verbatim. It shows whether the credential actually works, which is the single most common cause.
-      render: text
+      label: CodeZero build
+      description: |
+        The first line of the **code0** channel in the Output panel:
+        `Ctrl`/`Cmd`+`Shift`+`P` → *Output*, then pick **code0** from the
+        dropdown. It names the version, the build and the commit — which is
+        what tells us exactly what you are running.
+      placeholder: "CodeZero 1.0.1 (build 12, a1b2c3d)"
     validations:
       required: true
 
   - type: input
     id: versions
     attributes:
-      label: Claude Code version and OS
-      description: "`claude --version`, plus macOS / Linux / Windows"
-      placeholder: "Claude Code 2.1.0, macOS 15.3"
+      label: VS Code version and OS
+      description: "*Code → About Visual Studio Code*, plus macOS / Linux / Windows"
+      placeholder: "VS Code 1.95.0, macOS 15.3"
     validations:
       required: true
 
@@ -35,21 +39,18 @@ body:
       required: true
 
   - type: textarea
-    id: hook-output
+    id: output-channel
     attributes:
-      label: Hook diagnostics (optional)
+      label: code0 output (optional)
       description: |
-        If Claude seems to be missing codebase context, run this from inside a git repository and paste the result:
-
-        ```
-        echo '{"hook_event_name":"UserPromptSubmit","user_input":"test","cwd":"'$PWD'"}' \
-          | npx @frigga-cloud/code0 hook user-prompt-submit
-        ```
+        The surrounding lines from that same **code0** Output channel. If the
+        panel was blank, stuck, or a notification said something failed, this
+        is usually where the reason is.
       render: text
 
   - type: markdown
     attributes:
       value: |
-        **Please do not paste credentials.** `status` is safe — it prints no
-        tokens — but `~/.claude/code0/credentials.json` contains a live refresh
-        token and should never be attached.
+        **Please do not paste tokens.** CodeZero keeps your credentials in VS
+        Code's secret storage and never prints them — but if something you are
+        about to attach contains one, redact it first.
