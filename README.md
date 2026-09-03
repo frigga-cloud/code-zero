@@ -5,16 +5,42 @@ questions about every repository you have, not just the one you happen to have
 open.
 
 ```bash
-npx @frigga-cloud/code0 init
+npm i -g @frigga-cloud/code0
+code0 init
 ```
 
 That's the install. A browser opens, you approve with your Frigga account, and
 you restart Claude Code. Nothing else to configure.
 
+Install it **globally** (`-g`). A plain `npm i` drops it into the current
+directory's `node_modules` and puts nothing on your `PATH`, so `code0` would only
+work from that one folder — and `status`, `upgrade` and `uninstall` are commands
+you will want later, from wherever you happen to be.
+
+To try it without installing anything, `npx @frigga-cloud/code0 init` also works.
+
 > This repository is for **issues and documentation**. The CLI's source is not
 > public; the published package contains the compiled tool.
 
 ---
+
+## Using it
+
+Once installed, code0 works in two ways.
+
+**Context arrives on its own.** A hook runs before every message and hands Claude
+the code relevant to what you just asked. Nothing to type.
+
+**Ask for the tools with `use code0`.** To have the agent actively go and search
+your other repositories, end the prompt with `use code0`:
+
+```
+who calls createOrder? use code0
+```
+
+Without it the agent tends to answer from the repository you have open — the
+right instinct for local questions, the wrong one for anything spanning
+repositories: callers, dependents, ownership, "is this still used anywhere?".
 
 ## What it does
 
@@ -40,10 +66,10 @@ The difference shows up on questions local search cannot answer:
 
 | | |
 |---|---|
-| `npx @frigga-cloud/code0 init` | Authorise, install the hooks, register the MCP server |
-| `npx @frigga-cloud/code0 status` | Is it installed **and working**? |
-| `npx @frigga-cloud/code0 upgrade` | Refresh after a new release (no re-login) |
-| `npx @frigga-cloud/code0 uninstall` | Remove it (`--purge` also drops credentials) |
+| `code0 init` | Authorise, install the hooks, register the MCP server |
+| `code0 status` | Is it installed **and working**? |
+| `code0 upgrade` | Refresh after a new release (no re-login) |
+| `code0 uninstall` | Remove it (`--purge` also drops credentials) |
 
 Run `init` again any time — it is safe to repeat and will re-authorise and
 refresh everything.
@@ -86,13 +112,13 @@ only a revocable refresh token, from which short-lived access tokens are minted.
 On a machine with no browser (SSH, containers):
 
 ```bash
-npx @frigga-cloud/code0 init --no-browser
+code0 init --no-browser
 ```
 
 ## If something looks wrong
 
 ```bash
-npx @frigga-cloud/code0 status
+code0 status
 ```
 
 It performs a real token exchange rather than checking whether a file exists, so
@@ -107,7 +133,7 @@ silently losing grounding for weeks is worse than a visible nudge.
 
 Please [open an issue](https://github.com/frigga-cloud/code-zero/issues) and include:
 
-- the output of `npx @frigga-cloud/code0 status`
+- the output of `code0 status`
 - your Claude Code version (`claude --version`)
 - your operating system
 
