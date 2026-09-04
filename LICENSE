@@ -1,21 +1,26 @@
-MIT License
+Copyright (c) Frigga Cloud Labs. All rights reserved.
 
-Copyright (c) 2026 Frigga Cloud Pvt. Ltd, India
+This repository contains the public documentation, listing text and images for
+CodeZero AI IDE ("the Materials"). It does not contain the extension's source
+code.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The CodeZero AI IDE extension itself is proprietary software. It is licensed,
+not sold, and is made available only to organisations holding a current
+subscription from Frigga Cloud Labs, under the licence shown on its Visual
+Studio Marketplace listing. Nothing in this repository grants any right to that
+software.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+You may view the Materials and link to them. You may not copy, modify,
+distribute, republish, sell, or create derivative works from the Materials,
+in whole or in part, without prior written permission from Frigga Cloud Labs,
+except to the extent that such restriction is prohibited by applicable law.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Product names, logos and screenshots are trademarks or trade dress of Frigga
+Cloud Labs and may not be used without permission.
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL FRIGGA CLOUD
+LABS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
